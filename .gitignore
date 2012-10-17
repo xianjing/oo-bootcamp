@@ -5,3 +5,5 @@
 *.war
 *.ear
 .iws
+/out/production/oo-bootcamp/src/*
+oo-bootcamp.iws

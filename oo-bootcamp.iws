@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5dd5254-b441-40ab-9ae3-f2a3850dd0df" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/Car.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/ParkingLots.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/Ticket.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/exception/ParkingLotsIsFullException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/exception/UnknownCarException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/exception/NoAvailableSlotsException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/ParkingLots.java" afterPath="$PROJECT_DIR$/src/src/ParkingLots.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ParkingLotTest.java" afterPath="$PROJECT_DIR$/test/ParkingLotTest.java" />
     </list>
     <ignored path="oo-bootcamp.iws" />
@@ -75,11 +72,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParkingLotTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ParkingLotTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/ParkingLotTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="9" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="11" column="13" selection-start="302" selection-end="302" vertical-scroll-proportion="0.33333334">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="16" selection-start="50" selection-end="50" vertical-scroll-proportion="0.29359823">
+            <state line="9" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,9 +113,10 @@
       <file leaf-file-name="ParkingLots.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/ParkingLots.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="22" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+            <state line="9" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#237#250#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,11 +166,11 @@
         <option value="$PROJECT_DIR$/src/src/Ticket.java" />
         <option value="$PROJECT_DIR$/src/src/Car.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/src/exception/ParkingLotsIsFullException.java" />
+        <option value="$PROJECT_DIR$/src/src/exception/UnknownCarException.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/test/ParkingLotTest.java" />
         <option value="$PROJECT_DIR$/src/src/ParkingLots.java" />
-        <option value="$PROJECT_DIR$/src/src/exception/ParkingLotsIsFullException.java" />
-        <option value="$PROJECT_DIR$/src/src/exception/UnknownCarException.java" />
       </list>
     </option>
   </component>
@@ -646,15 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/ParkingLots.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/src/Ticket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="19" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
@@ -683,17 +674,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ParkingLotTest.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="9" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0">
+        <state line="9" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/src/ParkingLots.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="50" selection-end="50" vertical-scroll-proportion="0.29359823">
-          <folding />
+        <state line="9" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#237#250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ParkingLotTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="302" selection-end="302" vertical-scroll-proportion="0.33333334">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
