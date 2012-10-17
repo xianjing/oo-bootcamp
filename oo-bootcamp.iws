@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5dd5254-b441-40ab-9ae3-f2a3850dd0df" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/exception/NoAvailableSlotsException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/exception/NoCarAvailableException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/ParkingLots.java" afterPath="$PROJECT_DIR$/src/src/ParkingLots.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ParkingLotTest.java" afterPath="$PROJECT_DIR$/test/ParkingLotTest.java" />
@@ -72,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParkingLotTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ParkingLotTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ParkingLotTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="302" selection-end="302" vertical-scroll-proportion="0.33333334">
+            <state line="23" column="38" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,7 +95,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -110,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParkingLots.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ParkingLots.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/src/ParkingLots.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+            <state line="16" column="13" selection-start="381" selection-end="381" vertical-scroll-proportion="0.67108166">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#237#250#0" expanded="true" />
@@ -676,26 +676,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/ParkingLots.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#237#250#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ParkingLotTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="302" selection-end="302" vertical-scroll-proportion="0.33333334">
+        <state line="23" column="38" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/ParkingLots.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="13" selection-start="381" selection-end="381" vertical-scroll-proportion="0.67108166">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#237#250#0" expanded="true" />
           </folding>
         </state>
       </provider>
