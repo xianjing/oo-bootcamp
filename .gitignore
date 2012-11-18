@@ -4,7 +4,7 @@
 *.jar
 *.war
 *.ear
-.iws
-out/production/oo-bootcamp/src/*
+*.iws
+out/**
 oo-bootcamp.iws
 out

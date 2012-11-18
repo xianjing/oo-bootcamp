@@ -1,4 +1,3 @@
-import org.junit.Before;
 import org.junit.Test;
 import src.Car;
 import src.ParkingLots;
@@ -12,11 +11,6 @@ import static org.junit.Assert.assertSame;
 public class ParkingLotTest {
 
     private ParkingLots parkingLots;
-
-    @Before
-    public void setUp() throws Exception {
-        parkingLots = new ParkingLots(1);
-    }
 
     @Test
     public void should_park_succeed_given_available_slots(){
