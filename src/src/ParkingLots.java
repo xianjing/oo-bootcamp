@@ -1,13 +1,13 @@
 package src;
 
 import src.exception.ParkingLotsIsFullException;
-import src.exception.UnknownCarException;
+import src.exception.UnknownTicketException;
 
 import java.util.HashMap;
 
-public class ParkingLots {
+public class ParkingLots implements Comparable{
     private int capacity;
-    private HashMap<Ticket, Car> cars = new HashMap<Ticket, Car>();
+    private HashMap<Ticket, Car> ticketMap = new HashMap<Ticket, Car>();
 
     public ParkingLots(int capacity) {
         this.capacity = capacity;
@@ -18,18 +18,24 @@ public class ParkingLots {
             throw new ParkingLotsIsFullException();
         }
         Ticket ticket = new Ticket();
-        cars.put(ticket, car);
+        ticketMap.put(ticket, car);
         return ticket;
     }
 
-    private int getAvailableSlots() {
-        return capacity - cars.size();
+    public int getAvailableSlots() {
+        return capacity - ticketMap.size();
     }
 
     public Car unPark(Ticket ticket) {
-        if(!cars.containsKey(ticket)){
-            throw new UnknownCarException();
+        if(!ticketMap.containsKey(ticket)){
+            throw new UnknownTicketException();
         }
-        return cars.remove(ticket);
+        return ticketMap.remove(ticket);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        ParkingLots that = (ParkingLots) o;
+        return this.getAvailableSlots() - that.getAvailableSlots();
     }
 }

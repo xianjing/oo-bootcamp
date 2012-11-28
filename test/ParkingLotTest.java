@@ -3,7 +3,7 @@ import src.Car;
 import src.ParkingLots;
 import src.Ticket;
 import src.exception.ParkingLotsIsFullException;
-import src.exception.UnknownCarException;
+import src.exception.UnknownTicketException;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
@@ -37,7 +37,7 @@ public class ParkingLotTest {
        assertSame(expectedCar, actualCar);
     }
 
-    @Test(expected = UnknownCarException.class)
+    @Test(expected = UnknownTicketException.class)
     public void should_fail_given_invalid_ticket() {
         parkingLots = new ParkingLots(1);
 
