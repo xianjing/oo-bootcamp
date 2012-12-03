@@ -5,7 +5,7 @@ import src.exception.UnknownTicketException;
 
 import java.util.HashMap;
 
-public class ParkingLots implements Comparable{
+public class ParkingLots implements IParkingLots {
     private int capacity;
     private HashMap<Ticket, Car> ticketMap = new HashMap<Ticket, Car>();
 
@@ -13,6 +13,7 @@ public class ParkingLots implements Comparable{
         this.capacity = capacity;
     }
 
+    @Override
     public Ticket park(Car car){
         if(getAvailableSlots() == 0){
             throw new ParkingLotsIsFullException();
@@ -22,10 +23,12 @@ public class ParkingLots implements Comparable{
         return ticket;
     }
 
+    @Override
     public int getAvailableSlots() {
         return capacity - ticketMap.size();
     }
 
+    @Override
     public Car unPark(Ticket ticket) {
         if(!ticketMap.containsKey(ticket)){
             throw new UnknownTicketException();
@@ -33,9 +36,12 @@ public class ParkingLots implements Comparable{
         return ticketMap.remove(ticket);
     }
 
+    public double getVacancyRate() {
+        return Math.round(((double) this.getAvailableSlots() / (double) capacity) * 100) * 0.01;
+    }
+    
     @Override
-    public int compareTo(Object o) {
-        ParkingLots that = (ParkingLots) o;
-        return this.getAvailableSlots() - that.getAvailableSlots();
+    public int getCapacity(){
+        return capacity;
     }
 }

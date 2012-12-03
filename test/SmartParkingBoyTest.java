@@ -1,5 +1,6 @@
 import org.junit.Test;
 import src.*;
+import src.strategy.MaxAvailableSlotsParkingLotsSelection;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,24 +14,25 @@ public class SmartParkingBoyTest {
         int firstParkingLotsCapacity = 5;
         int secondParkingLotsCapacity = 5;
 
-        ParkingLots firstParkingLots = new ParkingLots(firstParkingLotsCapacity);
-        ParkingLots secondParkingLots = new ParkingLots(secondParkingLotsCapacity);
-        List<ParkingLots> parkingLotsList = Arrays.asList(firstParkingLots, secondParkingLots);
-        ParkingBoy parkingBoy = new ParkingBoy(parkingLotsList, new SlotsBasedSelectionStrategy());
+        IParkingLots firstIParkingLots = new ParkingLots(firstParkingLotsCapacity);
+        IParkingLots secondIParkingLots = new ParkingLots(secondParkingLotsCapacity);
+        List<IParkingLots> IParkingLotsList = Arrays.asList(firstIParkingLots, secondIParkingLots);
+        IParkingLots parkingBoy = new ParkingBoy(IParkingLotsList, new MaxAvailableSlotsParkingLotsSelection());
 
         parkingBoy.park(new Car());
 
-        assertEquals(firstParkingLotsCapacity -1, firstParkingLots.getAvailableSlots());
+        assertEquals(firstParkingLotsCapacity -1, firstIParkingLots.getAvailableSlots());
+        assertEquals(secondParkingLotsCapacity, secondIParkingLots.getAvailableSlots());
 
         Car firstCar = new Car();
         Ticket firstTicket = parkingBoy.park(firstCar);
 
-        assertEquals(firstParkingLotsCapacity -1, firstParkingLots.getAvailableSlots());
-        assertEquals(secondParkingLotsCapacity - 1, secondParkingLots.getAvailableSlots());
+        assertEquals(firstParkingLotsCapacity -1, firstIParkingLots.getAvailableSlots());
+        assertEquals(secondParkingLotsCapacity - 1, secondIParkingLots.getAvailableSlots());
 
-        parkingBoy.unpark(firstTicket);
+        parkingBoy.unPark(firstTicket);
         parkingBoy.park(firstCar);
-        assertEquals(firstParkingLotsCapacity -1, firstParkingLots.getAvailableSlots());
-        assertEquals(secondParkingLotsCapacity - 1, secondParkingLots.getAvailableSlots());
+        assertEquals(firstParkingLotsCapacity -1, firstIParkingLots.getAvailableSlots());
+        assertEquals(secondParkingLotsCapacity - 1, secondIParkingLots.getAvailableSlots());
     }
 }

@@ -4,26 +4,29 @@ import org.junit.Test;
 import src.*;
 import src.exception.ParkingLotsIsFullException;
 import src.exception.UnknownTicketException;
+import src.strategy.FirstParkingLotsSelection;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertSame;
 
 public class ParkingBoyTest {
 
-    private ParkingBoy parkingBoy;
+    private IParkingLots parkingBoy;
     private static final int FIRST_PARKING_LOTS_CAPACITY = 1;
     private static final int SECOND_PARKING_LOTS_CAPACITY = 1;
     private int totalCapacity = 0;
 
     @Before
     public void setUp() throws Exception {
-        List<ParkingLots> parkingLotsList = Arrays.asList(
-                new ParkingLots(FIRST_PARKING_LOTS_CAPACITY), 
-                new ParkingLots(SECOND_PARKING_LOTS_CAPACITY));
+        new ArrayList<IParkingLots>();
+        List<IParkingLots> parkingLotsList = new ArrayList<IParkingLots>();
+        parkingLotsList.add(new ParkingLots(FIRST_PARKING_LOTS_CAPACITY));
+        parkingLotsList.add(new ParkingLots(SECOND_PARKING_LOTS_CAPACITY));
+
         totalCapacity = FIRST_PARKING_LOTS_CAPACITY + SECOND_PARKING_LOTS_CAPACITY;
-        parkingBoy = new ParkingBoy(parkingLotsList, new PriorityBasedSelectionStrategy());
+        parkingBoy = new ParkingBoy(parkingLotsList, new FirstParkingLotsSelection());
     }
 
     @Test
@@ -38,7 +41,7 @@ public class ParkingBoyTest {
     public void should_unpark_succeed(){
         Car expectedCar = new Car();
         Ticket ticket = parkingBoy.park(expectedCar);
-        Car actualCar = parkingBoy.unpark(ticket);
+        Car actualCar = parkingBoy.unPark(ticket);
         assertSame(expectedCar, actualCar);
     }
     
@@ -52,7 +55,7 @@ public class ParkingBoyTest {
     @Test(expected = UnknownTicketException.class)
     public void should_fail_given_unpark_with_invalid_ticket(){
         Ticket fakeTicket = new Ticket();
-        parkingBoy.unpark(fakeTicket);
+        parkingBoy.unPark(fakeTicket);
     }
 
 }
