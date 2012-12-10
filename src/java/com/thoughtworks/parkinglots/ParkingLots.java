@@ -1,7 +1,7 @@
-package src;
+package com.thoughtworks.parkinglots;
 
-import src.exception.ParkingLotsIsFullException;
-import src.exception.UnknownTicketException;
+import com.thoughtworks.parkinglots.exception.ParkingLotsIsFullException;
+import com.thoughtworks.parkinglots.exception.UnknownTicketException;
 
 import java.util.HashMap;
 

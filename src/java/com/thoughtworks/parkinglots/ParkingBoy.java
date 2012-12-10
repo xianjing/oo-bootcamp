@@ -1,8 +1,8 @@
-package src;
+package com.thoughtworks.parkinglots;
 
-import src.exception.ParkingLotsIsFullException;
-import src.exception.UnknownTicketException;
-import src.strategy.ParkingLotsSelection;
+import com.thoughtworks.parkinglots.exception.ParkingLotsIsFullException;
+import com.thoughtworks.parkinglots.exception.UnknownTicketException;
+import com.thoughtworks.parkinglots.strategy.ParkingLotsSelection;
 
 import java.util.HashMap;
 import java.util.List;
@@ -10,11 +10,11 @@ import java.util.List;
 public class ParkingBoy implements  IParkingLots{
     protected List<IParkingLots> parkingLotsList;
     protected HashMap<Ticket, IParkingLots> ticketMap = new HashMap<Ticket, IParkingLots>();
-    private final ParkingLotsSelection parkingLotsSelection;
+    private ParkingLotsSelection parkingLotsSelection;
 
-    public ParkingBoy(List<IParkingLots> parkingLotsList, ParkingLotsSelection parkingLotsSelection1) {
+    public ParkingBoy(List<IParkingLots> parkingLotsList, ParkingLotsSelection parkingLotsSelection) {
         this.parkingLotsList = parkingLotsList;
-        parkingLotsSelection = parkingLotsSelection1;
+        this.parkingLotsSelection = parkingLotsSelection;
     }
 
     public Ticket park(Car car) {

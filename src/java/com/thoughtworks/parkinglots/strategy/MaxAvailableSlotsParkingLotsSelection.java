@@ -1,6 +1,6 @@
-package src.strategy;
+package com.thoughtworks.parkinglots.strategy;
 
-import src.IParkingLots;
+import com.thoughtworks.parkinglots.IParkingLots;
 
 import java.util.List;
 

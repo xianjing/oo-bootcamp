@@ -1,4 +1,4 @@
-package src;
+package com.thoughtworks.parkinglots;
 
 public interface IParkingLots {
     Ticket park(Car car);

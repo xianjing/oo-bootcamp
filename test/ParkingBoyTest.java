@@ -1,10 +1,10 @@
+import com.thoughtworks.parkinglots.*;
+import com.thoughtworks.parkinglots.exception.ParkingLotsIsFullException;
+import com.thoughtworks.parkinglots.exception.UnknownTicketException;
+import com.thoughtworks.parkinglots.strategy.FirstParkingLotsSelection;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import src.*;
-import src.exception.ParkingLotsIsFullException;
-import src.exception.UnknownTicketException;
-import src.strategy.FirstParkingLotsSelection;
 
 import java.util.ArrayList;
 import java.util.List;

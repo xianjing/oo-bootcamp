@@ -10,3 +10,5 @@ oo-bootcamp.iws
 out
 *.idea
 *.DS_Store
+.gradle/
+build/

@@ -9,7 +9,7 @@ When park a car
 Should succeed
 
 
-### Requirement IV Super ParkingBoy
+### Requirement IV Super com.thoughtworks.parkinglots.ParkingBoy
 
 Given a parkingBoy having 2 parkingLots,
 And the first parkingLot's vacancy rate is greater than the second,
@@ -17,7 +17,7 @@ When park a car
 Should succeed and park into the first parkingLots
 
 
-### Requirement III Smart ParkingBoy
+### Requirement III Smart com.thoughtworks.parkinglots.ParkingBoy
 
 Given a parkingBoy having 2 parkingLots,
 And the first parkingLot's available slots is greater than the second.
@@ -26,21 +26,21 @@ Should succeed and park into the first parkingLots
 
 
 
-### Requirement II - ParkingBoy
+### Requirement II - com.thoughtworks.parkinglots.ParkingBoy
 
-Given a ParkingBoy having 2 parkingLots that have available slots
+Given a com.thoughtworks.parkinglots.ParkingBoy having 2 parkingLots that have available slots
 When park a car
 Should succeed
 
-Given a ParkingBoy having 2 parkingLots and both are full
+Given a com.thoughtworks.parkinglots.ParkingBoy having 2 parkingLots and both are full
 When park a car
 Should fail
 
-Given a ParkingBoy having 2 parkingLots that have one car parked
+Given a com.thoughtworks.parkinglots.ParkingBoy having 2 parkingLots that have one car parked
 When unpark with valid ticket
 Should succeed
 
-Given a ParkingBoy having 2 parkingLots
+Given a com.thoughtworks.parkinglots.ParkingBoy having 2 parkingLots
 When unpark with invalid ticket
 Should fail
 

@@ -1,10 +1,14 @@
+import com.thoughtworks.parkinglots.Car;
+import com.thoughtworks.parkinglots.IParkingLots;
+import com.thoughtworks.parkinglots.ParkingLots;
+import com.thoughtworks.parkinglots.Ticket;
 import org.junit.Test;
-import src.Car;
-import src.IParkingLots;
-import src.ParkingLots;
-import src.Ticket;
-import src.exception.ParkingLotsIsFullException;
-import src.exception.UnknownTicketException;
+import com.thoughtworks.parkinglots.Car;
+import com.thoughtworks.parkinglots.IParkingLots;
+import com.thoughtworks.parkinglots.ParkingLots;
+import com.thoughtworks.parkinglots.Ticket;
+import com.thoughtworks.parkinglots.exception.ParkingLotsIsFullException;
+import com.thoughtworks.parkinglots.exception.UnknownTicketException;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
