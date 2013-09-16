@@ -44,4 +44,9 @@ public class ParkingLots implements IParkingLots {
     public int getCapacity(){
         return capacity;
     }
+
+    @Override
+    public String print() {
+        return "";
+    }
 }

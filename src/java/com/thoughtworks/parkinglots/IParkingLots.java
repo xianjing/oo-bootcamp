@@ -10,4 +10,6 @@ public interface IParkingLots {
     double getVacancyRate();
 
     int getCapacity();
+
+    String print();
 }

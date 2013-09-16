@@ -51,6 +51,11 @@ public class ParkingBoy implements  IParkingLots{
         return totalCapacity;
     }
 
+    @Override
+    public String print() {
+        return "";
+    }
+
     public int getAvailableSlots(){
         int availableSlots = 0;
         for(IParkingLots parkingLots : parkingLotsList){
